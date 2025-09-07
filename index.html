@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Terrace Lab - From Idea to Intelligence">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrace Lab - From Idea to Intelligence</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#0ea5e9">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="theme-color" content="#0ea5e9">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="assets/icons/header_logo.png" alt="Terrace Lab Logo">
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <div class="language-selector">
+                        <button class="language-toggle" id="languageToggle">
+                            <span id="currentLanguage">EN</span>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <button class="language-option" data-lang="en">English</button>
+                            <button class="language-option" data-lang="ko">한국어</button>
+                            <button class="language-option" data-lang="ja">日本語</button>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon" style="display: none;">
+                            <path d="m12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+                  fill="#06b6d4"
+                />
+                <rect
+                  x="14"
+                  y="22"
+                  width="12"
+                  height="4"
+                  rx="2"
+                  fill="#10b981"
+                />
+                <circle cx="20" cy="28" r="2" fill="#1e40af" />
+                <!-- Circuit pattern -->
+                <path
+                  d="M20 6L20 10M20 30L20 34M6 20L10 20M30 20L34 20"
+                  stroke="#1e40af"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <span class="logo-text">Terrace Lab</span>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span>From</span> <span class="gradient-text">Idea</span> <span>to</span> <span class="gradient-text">Intelligence</span>
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">
+                        AI development company that transforms ideas into intelligence
+                    </p>
+                    <p class="hero-description" data-i18n="hero.description">
+                        We create the future of business with sustainable technology and innovative AI solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" data-i18n="hero.start_project">Start Project</button>
+                        <button class="btn btn-secondary" data-i18n="hero.view_portfolio">View Portfolio</button>
+                    </div>
+                </div>
+          <div class="hero-visual">
+            <div class="visual-container">
+              <!-- Animated Network Nodes -->
+              <div class="network-nodes">
+                <div class="node node-1"></div>
+                <div class="node node-2"></div>
+                <div class="node node-3"></div>
+                <div class="node node-4"></div>
+                <div class="node node-5"></div>
+                <svg class="connections" width="300" height="300">
+                  <line class="connection" x1="60" y1="60" x2="240" y2="90" />
+                  <line class="connection" x1="240" y1="90" x2="200" y2="210" />
+                  <line
+                    class="connection"
+                    x1="200"
+                    y1="210"
+                    x2="100"
+                    y2="240"
+                  />
+                  <line class="connection" x1="100" y1="240" x2="60" y2="150" />
+                  <line class="connection" x1="60" y1="150" x2="150" y2="120" />
+                </svg>
+              </div>
+              <!-- Digital Terrace Steps -->
+              <div class="digital-terrace">
+                <div class="terrace-step step-1"></div>
+                <div class="terrace-step step-2"></div>
+                <div class="terrace-step step-3"></div>
+                <div class="terrace-step step-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="about.title">Sustainable AI Innovation</h2>
+                <p data-i18n="about.subtitle">Intelligent solutions created through the harmony of technology and nature</p>
+            </div>
+            <div class="about-content">
+                <div class="about-cards">
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <!-- Circuit + Leaf -->
+                                <path d="M24 8C24 8 16 12 16 20C16 28 24 32 24 32C24 32 32 28 32 20C32 12 24 8 24 8Z" fill="#10b981" opacity="0.2"/>
+                                <path d="M20 16L28 16M20 20L28 20M20 24L28 24" stroke="#0ea5e9" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.card1.title">Sustainable Technology</h3>
+                        <p data-i18n="about.card1.description">We create a sustainable future with eco-friendly AI solutions.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <!-- Pixelated Steps -->
+                                <rect x="8" y="32" width="8" height="8" fill="#1e40af"/>
+                                <rect x="16" y="24" width="8" height="16" fill="#0ea5e9"/>
+                                <rect x="24" y="16" width="8" height="24" fill="#06b6d4"/>
+                                <rect x="32" y="8" width="8" height="32" fill="#10b981"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.card2.title">Step-by-Step Growth</h3>
+                        <p data-i18n="about.card2.description">We grow businesses through systematic and phased approaches.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <!-- Network Nodes -->
+                                <circle cx="12" cy="12" r="4" fill="#1e40af"/>
+                                <circle cx="36" cy="12" r="4" fill="#0ea5e9"/>
+                                <circle cx="12" cy="36" r="4" fill="#06b6d4"/>
+                                <circle cx="36" cy="36" r="4" fill="#10b981"/>
+                                <circle cx="24" cy="24" r="6" fill="#1e40af"/>
+                                <line x1="12" y1="12" x2="24" y2="24" stroke="#1e40af" stroke-width="2"/>
+                                <line x1="36" y1="12" x2="24" y2="24" stroke="#0ea5e9" stroke-width="2"/>
+                                <line x1="12" y1="36" x2="24" y2="24" stroke="#06b6d4" stroke-width="2"/>
+                                <line x1="36" y1="36" x2="24" y2="24" stroke="#10b981" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.card3.title">AI Network</h3>
+                        <p data-i18n="about.card3.description">We create new value through connected intelligent systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="services.title">AI Development Services</h2>
+                <p data-i18n="services.subtitle">From ideas to intelligent solutions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3 data-i18n="services.service1.title">AI Consulting</h3>
+                    <p data-i18n="services.service1.description">From business requirement analysis to AI strategy formulation</p>
+                    <ul>
+                        <li data-i18n="services.service1.item1">AI feasibility assessment</li>
+                        <li data-i18n="services.service1.item2">Technology roadmap design</li>
+                        <li data-i18n="services.service1.item3">ROI analysis</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3 data-i18n="services.service2.title">Custom AI Development</h3>
+                    <p data-i18n="services.service2.description">Enterprise-specific AI model and system development</p>
+                    <ul>
+                        <li data-i18n="services.service2.item1">Machine learning model development</li>
+                        <li data-i18n="services.service2.item2">Data pipeline construction</li>
+                        <li data-i18n="services.service2.item3">AI service deployment</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3 data-i18n="services.service3.title">Intelligent Automation</h3>
+                    <p data-i18n="services.service3.description">Process automation and optimization solutions</p>
+                    <ul>
+                        <li data-i18n="services.service3.item1">Business process analysis</li>
+                        <li data-i18n="services.service3.item2">Automation system design</li>
+                        <li data-i18n="services.service3.item3">Performance monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="portfolio.title">Success Stories</h2>
+                <p data-i18n="portfolio.subtitle">AI innovation stories across various industries</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <rect width="60" height="60" rx="8" fill="#1e40af" opacity="0.1"/>
+                                <path d="M20 25L25 30L40 15" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 data-i18n="portfolio.project1.title">Smart Factory AI</h3>
+                        <p data-i18n="portfolio.project1.description">Predictive maintenance system that achieved 40% productivity improvement for manufacturers</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag" data-i18n="portfolio.project1.tag2">Predictive Analytics</span>
+                            <span class="tag" data-i18n="portfolio.project1.tag3">Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <rect width="60" height="60" rx="8" fill="#0ea5e9" opacity="0.1"/>
+                                <circle cx="30" cy="30" r="15" stroke="#0ea5e9" stroke-width="3" fill="none"/>
+                                <circle cx="30" cy="30" r="5" fill="#0ea5e9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 data-i18n="portfolio.project2.title">Customer Behavior Analysis AI</h3>
+                        <p data-i18n="portfolio.project2.description">60% increase in conversion rate with personalized recommendation system</p>
+                        <div class="portfolio-tags">
+                            <span class="tag" data-i18n="portfolio.project2.tag1">Recommendation System</span>
+                            <span class="tag" data-i18n="portfolio.project2.tag2">Big Data</span>
+                            <span class="tag" data-i18n="portfolio.project2.tag3">Personalization</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <rect width="60" height="60" rx="8" fill="#10b981" opacity="0.1"/>
+                                <path d="M15 35L25 25L35 30L45 20" stroke="#10b981" stroke-width="3" stroke-linecap="round" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 data-i18n="portfolio.project3.title">Intelligent Document Processing</h3>
+                        <p data-i18n="portfolio.project3.description">80% reduction in document processing time with natural language processing technology</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag" data-i18n="portfolio.project3.tag2">Document Automation</span>
+                            <span class="tag">OCR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 data-i18n="contact.title">Start Your Project</h2>
+                    <p data-i18n="contact.subtitle">Have an idea? Let's develop it into an intelligent solution together.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>contact@Terrace.lab</span>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59531 1.99522 8.06792 2.16708 8.43748 2.48353C8.80703 2.79999 9.04751 3.23945 9.10999 3.72C9.22399 4.68007 9.45899 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5865 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.541 19.3199 14.776 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>+82 10-1234-5678</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" data-i18n-placeholder="contact.form.name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" data-i18n-placeholder="contact.form.email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-i18n-placeholder="contact.form.company" placeholder="Company">
+                    </div>
+                    <div class="form-group">
+                        <textarea data-i18n-placeholder="contact.form.message" placeholder="Tell us about your project" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/icons/footer_card.png" alt="Terrace Lab Logo">
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 data-i18n="footer.services.title">Services</h4>
+                        <ul>
+                            <li><a href="#services" data-i18n="footer.services.consulting">AI Consulting</a></li>
+                            <li><a href="#services" data-i18n="footer.services.development">Custom AI Development</a></li>
+                            <li><a href="#services" data-i18n="footer.services.automation">Intelligent Automation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4 data-i18n="footer.company.title">Company</h4>
+                        <ul>
+                            <li><a href="#about" data-i18n="footer.company.about">About Us</a></li>
+                            <li><a href="#portfolio" data-i18n="footer.company.portfolio">Portfolio</a></li>
+                            <li><a href="#contact" data-i18n="footer.company.contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Terrace Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
