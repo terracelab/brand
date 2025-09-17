@@ -70,6 +70,7 @@ const translations = {
     "contact.subtitle":
       "Have an idea? Let's develop it into an intelligent solution together.",
     "contact.form.name": "Name",
+    "contact.form.phone": "Phone",
     "contact.form.email": "Email",
     "contact.form.company": "Company",
     "contact.form.message": "Tell us about your project",
@@ -151,6 +152,7 @@ const translations = {
     "contact.subtitle":
       "아이디어가 있으신가요? 함께 지능형 솔루션으로 발전시켜보세요.",
     "contact.form.name": "이름",
+    "contact.form.phone": "전화번호",
     "contact.form.email": "이메일",
     "contact.form.company": "회사명",
     "contact.form.message": "프로젝트에 대해 설명해주세요",
@@ -230,6 +232,7 @@ const translations = {
     "contact.subtitle":
       "アイデアをお持ちですか？一緒にインテリジェントソリューションに発展させましょう。",
     "contact.form.name": "お名前",
+    "contact.form.phone": "電話番号",
     "contact.form.email": "メールアドレス",
     "contact.form.company": "会社名",
     "contact.form.message": "プロジェクトについて説明してください",
@@ -495,7 +498,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Form submission
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
+    contactForm.addEventListener("submit", async function (e) {
       e.preventDefault();
 
       // Simple validation
@@ -511,20 +514,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      if (isValid) {
-        const formData = new FormData(this);
-        const formObject = Object.fromEntries(formData);
-        console.log("Form submitted:", formObject);
-
-        // Show success message based on current language
-        const messages = {
-          en: "Your inquiry has been sent successfully. We will contact you soon.",
-          ko: "문의가 성공적으로 전송되었습니다. 빠른 시일 내에 연락드리겠습니다.",
-          ja: "お問い合わせが正常に送信されました。近日中にご連絡いたします。",
-        };
-        alert(messages[languageManager.currentLanguage] || messages.en);
-        this.reset();
-      } else {
+      if (!isValid) {
         const errorMessages = {
           en: "Please fill in all required fields.",
           ko: "필수 필드를 모두 입력해주세요.",
@@ -533,6 +523,93 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(
           errorMessages[languageManager.currentLanguage] || errorMessages.en
         );
+        return;
+      }
+
+      // Get form data
+      const formData = new FormData(this);
+      const formObject = Object.fromEntries(formData);
+
+      // Add additional fields required by the API
+      const submitData = {
+        name: formObject.name,
+        phone: formObject.phone || "",
+        email: formObject.email,
+        company: formObject.company || "",
+        message: formObject.message,
+        sourceSite: "brand",
+        sourceUrl: window.location.href,
+      };
+
+      // Show loading state
+      const submitButton = this.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      submitButton.disabled = true;
+
+      const loadingTexts = {
+        en: "Sending...",
+        ko: "전송 중...",
+        ja: "送信中...",
+      };
+      submitButton.textContent =
+        loadingTexts[languageManager.currentLanguage] || loadingTexts.en;
+
+      try {
+        const response = await fetch(
+          "http://localhost:8000/api/greeting/contact/",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(submitData),
+          }
+        );
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          // Show success message
+          const successMessages = {
+            en: "Your inquiry has been sent successfully. We will contact you soon.",
+            ko: "문의가 성공적으로 전송되었습니다. 빠른 시일 내에 연락드리겠습니다.",
+            ja: "お問い合わせが正常に送信されました。近日中にご連絡いたします。",
+          };
+          alert(
+            successMessages[languageManager.currentLanguage] ||
+              successMessages.en
+          );
+          this.reset();
+        } else {
+          // Show error message from server or default
+          const errorMessage =
+            result.message || result.error || "An error occurred";
+          const errorMessages = {
+            en: `Error: ${errorMessage}`,
+            ko: `오류: ${errorMessage}`,
+            ja: `エラー: ${errorMessage}`,
+          };
+          alert(
+            errorMessages[languageManager.currentLanguage] || errorMessages.en
+          );
+        }
+      } catch (error) {
+        console.error("Form submission error:", error);
+
+        // Show network error message
+        const networkErrorMessages = {
+          en: "Network error occurred. Please check your connection and try again.",
+          ko: "네트워크 오류가 발생했습니다. 연결을 확인하고 다시 시도해주세요.",
+          ja: "ネットワークエラーが発生しました。接続を確認して再度お試しください。",
+        };
+        alert(
+          networkErrorMessages[languageManager.currentLanguage] ||
+            networkErrorMessages.en
+        );
+      } finally {
+        // Reset button state
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
       }
     });
   }
